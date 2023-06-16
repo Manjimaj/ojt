@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+<header>
+<div class="container-fluid">
+
+            <!-- As a link -->
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="{% static 'images/CARIMG1.png' %}" width="250px" height="150px">
+            </div>
+            <div class="col-6" >
+                  <a class="navbar-brand" href="#">qwertyu</a>
+            </div>
+            <div class="col-3" >
+                <img src="{% static 'images/CARIMG.jpg' %}" width="250px" height="150px" >
+            </div>
+
+
+
+
+</div>
+        </div>
+
+
+</nav>
+
+
+<!-- As a heading-->
+<!--<nav class="navbar navbar-light bg-light">-->
+<!--  <span class="navbar-brand mb-0 h1">Navbar</span>-->
+</nav>
+
+
+
+
+</div>
+</header>
+<form method="POST" action="">
+  {% csrf_token %}
+  <div class="form-group">
+      <h1>Admin Login</h1>
+    <label for="user">User ID:</label>
+    <input type="text" name="userid" >
+
+  </div>
+    <br>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password:</label>
+    <input type="password" name="password">
+  </div>
+    <br>
+    <div class="form-group">
+
+    <label for="usertype">User Type:</label>
+        <select name="usertype">
+          
+            <option>Admin</option>
+            <option>Customer</option>
+            <option>Branch</option>
+        </select>
+        
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+</body>
+</html>
+

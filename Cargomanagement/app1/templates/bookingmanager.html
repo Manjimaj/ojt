@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Location</a></li>
+            <li><a href="#">Branch</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Alert</a></li>
+            <li><a href="#">Pickup</a></li>
+            <li><a href="#">Transport</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Track</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+      <form action="" method="POST">
+        {% csrf_token %}
+      <center>
+        <caption>Booking Manager</caption>
+        <br>
+        <div class="form-group">
+            <label for="bid">Booking ID</label>
+            <input type="text" name="bookingid">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="cid">Customer ID</label>
+            <input type="text" name="customerid">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="ides">Item Description</label>
+            <input type="text" name="itemdescription">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="no">No of Bundles</label>
+            <input type="text" name="noofbundles">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="wght">Weight</label>
+            <input type="text" name="weight">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="ptype">Pickup Type</label>
+            <input type="text" name="pickuptype">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="dtype">Delivery Type</label>
+            <input type="text" name="deliverytype">
+        </div>
+        <br>
+        <div class="form-group">
+        <label for="dob">Date of Booking</label>
+        <input type="text" name="dateofbooking">
+    </div>
+    <br>
+    <div class="form-group">
+    <label for="pb">Pickup Branch</label>
+    <input type="text" name="pickupbranch">
+</div>
+<br>
+<div class="form-group">
+<label for="dbranch">Delivery Branch</label>
+<input type="text" name="deliverybranch">
+</div>
+<br>
+<div class="form-group">
+<label for="pa">Pickup Address</label>
+<input type="text" name="pickupaddress">
+</div>
+<br>
+<div class="form-group">
+<label for="dadd">Delivery Address</label>
+<input type="text" name="deliveryaddress">
+</div>
+<br>
+<div class="form-group">
+<label for="rmk">Remarks</label>
+<input type="text" name="remarks">
+</div>
+<br>
+<div class="form-group">
+<label for="sts">Status</label>
+<input type="text" name="status">
+</div>
+<br>       
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </center>
+    </form>
+</body>
+</html>

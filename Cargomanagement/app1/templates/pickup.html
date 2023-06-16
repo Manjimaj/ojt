@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Location</a></li>
+            <li><a href="#">Branch</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Alert</a></li>
+            <li><a href="#">Pickup</a></li>
+            <li><a href="#">Transport</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Track</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+      <form action="" method="POST"> 
+        {% csrf_token %}   
+      <center>
+        <caption>Next Location</caption>
+        <br>
+
+        <div class="form-group">
+            <label for="id">Booking ID</label>
+            <select name="" id="">
+                <option value="">##</option><!--here add the database and fetch the balance-->
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">Current Branch</label>
+            <input type="text" name=""> <!--here add the database branch id as value -->
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="id">Next Branch</label>
+            <select name="" id="">
+                <option value="">##</option><!--here add the database and fetch the balance-->
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="id">Transport Details</label>
+            <textarea name="##" id="" cols="10" rows="10" style="height: 31px; width: 183px;" ></textarea> <!--Name is not added for the database-->
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="id">Track Date</label>
+            <input type="text" name="" id="">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Next Location</button>
+      </center>
+    </form>
+</body>
+</html>

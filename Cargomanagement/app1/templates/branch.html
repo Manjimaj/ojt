@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Location</a></li>
+        <li><a href="#">Branch</a></li>
+        <li><a href="#">Customer</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Alert</a></li>
+        <li><a href="#">Pickup</a></li>
+        <li><a href="#">Transport</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Track</a></li>
+        <li><a href="#">Change Password</a></li>
+        <li><a href="#">logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <center>
+    <caption>Branch</caption>
+  <table border="2">
+    
+    <thead>
+      <tr>
+        <th>Sl No</th>
+        <th>Branch ID</th>
+        <th>Branch Name</th>
+        <th>Location ID</th>
+        <th>Door Number</th>
+        <th>Place</th>
+        <th>Address</th>
+        <th>Country</th>
+        <th>Email ID</th>
+        <th>Phone Number</th>
+        <th>Fax Number</th>
+        <th colspan="2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for Branch in branch %}
+      <tr>
+        <td>{{Branch.id}}</td>
+        <td>{{Branch.branchid}}</td>
+        <td>{{Branch.branchname}}</td>
+        <td>{{Branch.locationid}}</td>
+        <td>{{Branch.doornumber}}</td>
+        <td>{{Branch.place}}</td>
+        <td>{{Branch.address}}</td>
+        <td>{{Branch.country}}</td>
+        <td>{{Branch.emailid}}</td>
+        <td>{{Branch.phonenum}}</td>
+        <td>{{Branch.faxnum}}</td>
+        <td><a href="/edit/{{Branch.id}}">Update</a></td>
+       
+
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+</center>
+</body>
+</html>

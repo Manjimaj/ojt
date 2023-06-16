@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Location</a></li>
+            <li><a href="#">Branch</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Alert</a></li>
+            <li><a href="#">Pickup</a></li>
+            <li><a href="#">Transport</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Track</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+      <form action="" method="POST">
+        {% csrf_token %}
+      <center>
+        <caption>Customer Manager</caption>
+        <br>
+        <div class="form-group">
+            <label for="id">Customer ID</label>
+            <input type="text" name="customerid">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">Door Number</label>
+            <input type="text" name="doornumber">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="p">Place</label>
+            <input type="text" name="place">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="add">Address</label>
+            <input type="text" name="address">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="c">Country</label>
+            <input type="text" name="country">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">Email ID</label>
+            <input type="text" name="emailid">
+        </div>
+        <br>
+        
+        <div class="form-group">
+            <label for="pnum">Phone Number</label>
+            <input type="tel" name="phonenumber">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="mnum">Mobile Number</label>
+            <input type="tel" name="mobilenumber">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <input type="password" name="password">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="st">Status</label>
+            <input type="text" name="status">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </center>
+      </form>
+</body>
+</html>
+  

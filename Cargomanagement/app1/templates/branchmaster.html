@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Location</a></li>
+            <li><a href="#">Branch</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Alert</a></li>
+            <li><a href="#">Pickup</a></li>
+            <li><a href="#">Transport</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Track</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+      <form action="" method="POST"> 
+        {% csrf_token %}   
+      <center>
+        <caption>Branch Master</caption>
+        <br>
+
+        <div class="form-group">
+            <label for="id">Branch ID</label>
+            <input type="text" name="branchid">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">Branch Name</label>
+            <input type="text" name="branchname">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="lid">Location ID</label>
+            <input type="text" name="locationid">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="dno">Door Number</label>
+            <input type="text" name="doornumber">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="p">Place</label>
+            <input type="text" name="place">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="add">Address</label>
+            <input type="text" name="address">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="c">Country</label>
+            <input type="text" name="country">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">Email ID</label>
+            <input type="email" name="emailid">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="pno">Phone Number</label>
+            <input type="tel" name="phonenum">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="fno">Fax Number</label>
+            <input type="tel" name="faxnum">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </center>
+    </form>
+</body>
+</html>

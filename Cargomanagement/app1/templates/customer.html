@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Location</a></li>
+            <li><a href="#">Branch</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Alert</a></li>
+            <li><a href="#">Pickup</a></li>
+            <li><a href="#">Transport</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Track</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+      <center>
+        <caption>Customer</caption>
+        <table border="2">
+    
+            <thead>
+              <tr>
+                <th>Sl No</th>
+                <th>Customer ID</th>
+                <th>Door Number</th>
+                <th>Place</th>
+                <th>Address</th>
+                <th>Country</th>
+                <th>EmailID</th>
+                <th>Phone Number</th>
+                <th>Mobile Number</th>
+                <th>Password</th>
+                <th>Status</th>
+                
+
+              </tr>
+            </thead>
+            <tbody>
+                {% for Customermanager in data %}
+                <tr>
+                    <td>{{Customermanager.id}}</td>
+                    <td>{{Customermanager.customerid}}</td>
+                    <td>{{Customermanager.doornumber}}</td>
+                    <td>{{Customermanager.place}}</td>
+                    <td>{{Customermanager.address}}</td>
+                    <td>{{Customermanager.country}}</td>
+                    <td>{{Customermanager.emailid}}</td>
+                    <td>{{Customermanager.phonenumber}}</td>
+                    <td>{{Customermanager.mobilenumber}}</td>
+                    <td>{{Customermanager.password}}</td>
+                    <td>{{Customermanager.status}}</td>
+                    
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Location</a></li>
+            <li><a href="#">Branch</a></li>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Alert</a></li>
+            <li><a href="#">Pickup</a></li>
+            <li><a href="#">Transport</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Track</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+      <center>
+        <caption>Booking</caption>
+        <table border="2">
+    
+            <thead>
+              <tr>
+                <th>Sl No</th>
+                <th>Booking ID</th>
+                <th>Customer ID</th>
+                <th>Item Description</th>
+                <th>No of Bundles</th>
+                <th>Weight</th>
+                <th>Pickup Type</th>
+                <th>Delivery Type</th>
+                <th>Date of Booking</th>
+                <th>Pickup Branch</th>
+                <th>Delivery Branch</th>
+                <th>Pickup Branch</th>
+                <th>Delivery Branch</th>
+                <th>Pickup Address</th>
+                <th>Delivery Address</th>
+                <th>Remarks</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for Book in book %}
+                <tr>
+
+                    <td>{{Book.id}}</td>
+                    <td>{{Book.bookingid}}</td>
+                    <td>{{Book.customerid}}</td>
+                    <td>{{Book.itemdescription}}</td>
+                    <td>{{Book.noofbundles}}</td>
+                    <td>{{Book.weight}}</td>
+                    <td>{{Book.pickuptype}}</td>
+                    <td>{{Book.deliverytype}}</td>
+                    <td>{{Book.dateofbooking}}</td>
+                    <td>{{Book.pickupbranch}}</td>
+                    <td>{{Book.deliverybranch}}</td>
+                    <td>{{Book.pickupaddress}}</td>
+                    <td>{{Book.deliveryaddress}}</td>
+                    <td>{{Book.remarks}}</td>
+                    <td>{{Book.status}}</td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+</body>
+</html>
